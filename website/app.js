@@ -1,6 +1,6 @@
 /* Global Variables */
 const apiUrl = 'http://localhost:8000';
-const apiKey = '&appid=017c54541f35518db3f3903322e9de70';
+const apiKey = '&appid=017c54541f35518db3f3903322e9de70&units=metric';
 const baseURL = 'https://api.openweathermap.org/data/2.5/forecast?zip=';
 
 const zipCodeElement = document.getElementById('zip');
