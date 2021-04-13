@@ -22,3 +22,18 @@ app.use(express.static('website'));
 // Setup Server
 const port = 8000;
 const server = app.listen(port, ()=> {console.log("Server Running!"); console.log(`Running on localhost: ${port}`)});
+
+//Initialize all route with a callback function
+app.get('/all', (req, res) => {
+  res.send(projectData);
+});
+
+//Initialize add route with a callback functione
+app.post('/add', (req, res) => {
+  newEntry = {
+    date: req.body.date,
+    content: req.body.content,
+    temp: req.body.temp,
+  };
+  projectData.push(newEntry);
+});
