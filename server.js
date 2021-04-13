@@ -26,14 +26,16 @@ const server = app.listen(port, ()=> {console.log("Server Running!"); console.lo
 //Initialize all route with a callback function
 app.get('/all', (req, res) => {
   res.send(projectData);
+  projectData = {};
 });
 
+// POST route
 //Initialize add route with a callback functione
 app.post('/add', (req, res) => {
-  newEntry = {
+  projectData = {
     date: req.body.date,
     content: req.body.content,
-    temp: req.body.temp,
-  };
-  projectData.push(newEntry);
+    temp: req.body.temperature,
+  }
+  console.log(projectData);
 });
